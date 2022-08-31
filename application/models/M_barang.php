@@ -27,7 +27,7 @@ class M_barang extends CI_Model{
 			 
 		if(isset($_POST['order'])) { // here order processing
 			$this->db->order_by($this->column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
-		}  else if(isset($this->order)) {
+		} else if(isset($this->order)) {
 			$order = $this->order;
 			$this->db->order_by(key($order), $order[key($order)]);
 		}
